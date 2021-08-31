@@ -116,5 +116,9 @@ PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
     PresencePolling
 
+# Permissions
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+
+# Sys and Vendor prop override
+PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
