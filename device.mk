@@ -110,3 +110,8 @@ DEVICE_PACKAGE_OVERLAYS += \
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay
+
+# Rcs Service
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    PresencePolling
