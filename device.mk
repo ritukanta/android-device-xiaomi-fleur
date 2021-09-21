@@ -105,3 +105,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
+
+# Wi-Fi
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
