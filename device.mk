@@ -97,3 +97,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default
+
+# Lights
+PRODUCT_PACKAGES += \
+    android.hardware.light@2.0-service.fleur.rc
