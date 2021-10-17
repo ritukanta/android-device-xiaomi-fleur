@@ -21,9 +21,11 @@ ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000
 # Privapp permissions whitelisting
 ro.control_privapp_permissions=log
 
-
 # Bluetooth
 persist.bluetooth.bluetooth_audio_hal.disabled=true
 
 # Blurs
 ro.surface_flinger.supports_background_blur=1
+
+# Fingerprint
+ro.boot.xiaomi.lockstate=0
