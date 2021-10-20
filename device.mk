@@ -30,6 +30,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
+# VNDK
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+PRODUCT_SHIPPING_API_LEVEL := 30
+
 # A/B
 AB_OTA_UPDATER := true
 
@@ -55,6 +59,9 @@ PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_EXTRA_VNDK_VERSIONS)/etc/audio_policy_configuration.xml
 
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
