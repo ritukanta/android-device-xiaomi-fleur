@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Device path
+DEVICE_PATH := device/xiaomi/fleur
+
 PRODUCT_MAKEFILES := \
     $(DEVICE_PATH)/aosp_fleur.mk
 

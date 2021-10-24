@@ -45,7 +45,6 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # A/B
 AB_OTA_UPDATER := true
-
 AB_OTA_PARTITIONS := \
     boot \
     dtbo \
@@ -190,10 +189,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Call proprietary blobs
-$(call inherit-product-if-exists, vendor/xiaomi/fleur/fleur-vendor.mk)
-
-# IMS Blobs
-$(call inherit-product, vendor/mediatek-ims/fleur/ims-vendor.mk)
+$(call inherit-product, vendor/xiaomi/fleur/fleur-vendor.mk)
 
 # GCam Go Greatness
 PRODUCT_PACKAGES += \
