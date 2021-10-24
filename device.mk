@@ -127,6 +127,7 @@ PRODUCT_PACKAGES += \
 # RcsService
 PRODUCT_PACKAGES += \
     com.android.ims.rcsmanager \
+    RcsService \
     PresencePolling
 
 # Permissions
