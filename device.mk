@@ -128,7 +128,9 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Wi-Fi and Tethering
 PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
-    WifiOverlay
+    WifiOverlay \
+    DozeOverlaySystem \
+    DozeOverlaySystemUI
 
 # RcsService
 PRODUCT_PACKAGES += \
