@@ -137,6 +137,14 @@ PRODUCT_COPY_FILES += \
 # Sys and Vendor prop override
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
 
+# Symbols
+PRODUCT_PACKAGES += \
+    libshim_vtservice
+
+# IMS Class
+PRODUCT_PACKAGES += \
+    ImsServiceBase
+
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1-service.fleur
