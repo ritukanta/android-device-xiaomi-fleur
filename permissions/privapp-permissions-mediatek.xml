@@ -35,6 +35,8 @@ applications that come with the platform
         <permission name="android.permission.READ_NETWORK_USAGE_HISTORY" />
         <permission name="android.permission.PACKET_KEEPALIVE_OFFLOAD" />
         <permission name="android.permission.CHANGE_WIFI_STATE" />
+        <permission name="android.permission.MODIFY_PHONE_STATE"/>
+        <permission name="android.permission.UPDATE_DEVICE_STATS"/>
         <permission name="android.permission.NETWORK_SIGNAL_STRENGTH_WAKEUP" />
     </privapp-permissions>
 
