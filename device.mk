@@ -78,9 +78,6 @@ PRODUCT_TARGET_VNDK_VERSION := 30
 PRODUCT_PACKAGES += \
     fastbootd
 
-PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/rootdir/etc/fstab.mt6781:$(TARGET_COPY_OUT_RAMDISK)/fstab.mt6781
-
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
