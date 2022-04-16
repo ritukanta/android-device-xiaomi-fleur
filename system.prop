@@ -58,3 +58,11 @@ debug.renderengine.backend=skiaglthreaded
 
 # Always use GPU for screen compositing
 debug.sf.disable_hwc_overlays=1
+
+# Log
+persist.log.tag.GED=S 
+persist.log.tag.hwcomposer=S 
+persist.log.tag.libnfc_nci=S 
+persist.log.tag.libPowerHal=S 
+persist.log.tag.mTEE=S 
+persist.log.tag.mtkpower@impl=S
