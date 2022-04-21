@@ -66,3 +66,6 @@ persist.log.tag.libnfc_nci=S
 persist.log.tag.libPowerHal=S 
 persist.log.tag.mTEE=S 
 persist.log.tag.mtkpower@impl=S
+
+# Iorap
+persist.device_config.runtime_native_boot.iorap_readahead_enable=true
