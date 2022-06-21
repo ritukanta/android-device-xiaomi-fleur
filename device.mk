@@ -31,8 +31,17 @@ PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 30
+PRODUCT_EXTRA_VNDK_VERSIONS := 31
 PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Boot control HAL
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.2-service \
+    android.hardware.boot@1.2-mtkimpl \
+    android.hardware.boot@1.2-mtkimpl.recovery
+
+PRODUCT_PACKAGES_DEBUG += \
+    bootctl
 
 # A/B
 AB_OTA_UPDATER := true
