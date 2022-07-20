@@ -1,6 +1,21 @@
 #Enable unspecialized app process pool
 persist.device_config.runtime_native.usap_pool_enabled=true
 
+# Audio
+ro.camera.sound.forced=0
+ro.audio.silent=0
+audio.deep_buffer.media=false
+persist.bluetooth.a2dp_offload.disabled=false
+persist.audio.button_jack.profile=volume
+persist.audio.button_jack.switch=0
+ro.vendor.audio.spk.clean=true
+ro.vendor.audio.us.proximity=true
+ro.audio.usb.period_us=16000
+ro.config.vc_call_vol_default=2
+ro.config.vc_call_vol_steps=7
+ro.config.media_vol_default=10
+vendor.audiohal.telephonytx.type=2
+
 # Performance
 ro.mtk_perf_simple_start_win=1
 ro.mtk_perf_fast_start_win=1
