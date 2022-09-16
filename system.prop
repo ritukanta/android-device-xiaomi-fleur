@@ -55,3 +55,6 @@ ro.zram.periodic_wb_delay_hours=24
 
 # Display
 debug.renderengine.backend=skiaglthreaded
+
+# Always use GPU for screen compositing
+debug.sf.disable_hwc_overlays=1
