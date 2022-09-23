@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+# Device path
+DEVICE_PATH := device/xiaomi/fleur
 
 # Inherit virtual_ab_ota product
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
@@ -24,6 +26,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Include GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
+# Soong namespaces
+PRODUCT_SOONG_NAMESPACES += \
+    $(DEVICE_PATH)
 
 # A/B
 AB_OTA_UPDATER := true
