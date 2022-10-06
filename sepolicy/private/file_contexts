@@ -6,3 +6,6 @@
 
 # Biometrics
 /system/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service\.fleur u:object_r:hal_fingerprint_fleur_exec:s0
+
+# VoLTE
+/system/bin/vtservice u:object_r:vtservice_exec:s0
