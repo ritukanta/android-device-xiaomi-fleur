@@ -144,7 +144,7 @@ VENDOR_SECURITY_PATCH := 2022-04-01
 
 
 # Asserts
-TARGET_OTA_ASSERT_DEVICE := fleur
+TARGET_OTA_ASSERT_DEVICE := fleur, miel
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs

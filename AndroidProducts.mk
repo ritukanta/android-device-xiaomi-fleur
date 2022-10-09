@@ -1,13 +1,13 @@
 #
-# Copyright (C) 2022 The LineageOS Project
+# Copyright (C) 2022 The Pixel Experience Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 PRODUCT_MAKEFILES := \
-    $(DEVICE_PATH)/lineage_fleur.mk
+    $(DEVICE_PATH)/aosp_fleur.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_fleur-user \
-    lineage_fleur-userdebug \
-    lineage_fleur-eng
+    aosp_fleur-user \
+    aosp_fleur-userdebug \
+    aosp_fleur-eng
