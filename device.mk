@@ -172,3 +172,6 @@ $(call inherit-product-if-exists, vendor/xiaomi/fleur/fleur-vendor.mk)
 
 # IMS Blobs
 $(call inherit-product, vendor/mediatek-ims/fleur/ims-vendor.mk)
+
+# GCam Go Greatness
+$(call inherit-product, $(DEVICE_PATH)/GCamGO/config.mk)
