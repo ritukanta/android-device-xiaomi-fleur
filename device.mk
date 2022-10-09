@@ -167,3 +167,6 @@ PRODUCT_COPY_FILES += \
 
 # Call proprietary blobs
 $(call inherit-product-if-exists, vendor/xiaomi/fleur/fleur-vendor.mk)
+
+# IMS Blobs
+$(call inherit-product, vendor/mediatek-ims/fleur/ims-vendor.mk)
