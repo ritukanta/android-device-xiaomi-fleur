@@ -145,7 +145,9 @@ PRODUCT_PACKAGES += \
 
 # Permissions
 PRODUCT_COPY_FILES += \
-    $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
+    $(DEVICE_PATH)/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml \
+    $(DEVICE_PATH)/permissions/privapp-permissions-whitelist-system.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-whitelist-system.xml \
+    $(DEVICE_PATH)/permissions/privapp-permissions-whitelist-system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-whitelist-system_ext.xml
 
 # Sys and Vendor prop override
 PRODUCT_COMPATIBLE_PROPERTY_OVERRIDE := true
@@ -174,4 +176,5 @@ $(call inherit-product-if-exists, vendor/xiaomi/fleur/fleur-vendor.mk)
 $(call inherit-product, vendor/mediatek-ims/fleur/ims-vendor.mk)
 
 # GCam Go Greatness
-$(call inherit-product, $(DEVICE_PATH)/GCamGO/config.mk)
+PRODUCT_PACKAGES += \
+    GCamGo
