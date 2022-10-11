@@ -32,3 +32,18 @@ lib64/libmtkperf_client.so
 lib64/libmtkshifter.so
 lib64/libvcodec_cap.so
 lib64/libvcodec_capenc.so
+
+# Charger
+bin/charger:bin/chargeonlymode
+
+# Charger (Xiaomi)
+lib/vendor.xiaomi.hardware.micharge@1.0.so
+lib64/vendor.xiaomi.hardware.micharge@1.0.so
+vendor/bin/hw/vendor.xiaomi.hardware.micharge@1.0-service
+vendor/bin/batterysecret
+vendor/etc/init/vendor.xiaomi.hardware.micharge@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hardware.micharge@1.0.xml
+vendor/lib/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
+vendor/lib/vendor.xiaomi.hardware.micharge@1.0.so
+vendor/lib64/hw/vendor.xiaomi.hardware.micharge@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hardware.micharge@1.0.so

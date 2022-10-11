@@ -61,3 +61,14 @@ on property:persist.vendor.radio.port_index=""
 on property:sys.boot_completed=1
     # force disable hw overlays to be true
     exec - root -- /system/bin/sh -c "service call SurfaceFlinger 1035 i32 6"
+
+service charger /system/bin/chargeonlymode
+    class charger
+    critical
+    group system graphics
+    seclabel u:r:healthd:s0
+
+on charger
+    # Turn backlight on and switch to backlight trigger
+    write /sys/class/leds/lcd-backlight/brightness "1000"
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
