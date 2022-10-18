@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The LineageOS Project
+ * Copyright (C) 2018 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,37 +14,22 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.light@2.0-service.spaced"
-
-#include <android-base/logging.h>
-#include <hidl/HidlTransportSupport.h>
+#include <android/binder_manager.h>
+#include <android/binder_process.h>
 
 #include "Light.h"
 
-using android::hardware::configureRpcThreadpool;
-using android::hardware::joinRpcThreadpool;
+using ::aidl::android::hardware::light::Lights;
 
-using android::hardware::light::V2_0::ILight;
-using android::hardware::light::V2_0::implementation::Light;
+int main()
+{
+    ABinderProcess_setThreadPoolMaxThreadCount(0);
+    std::shared_ptr<Lights> lights = ndk::SharedRefBase::make<Lights>();
 
-using android::OK;
-using android::status_t;
+    const std::string instance = std::string() + Lights::descriptor + "/default";
+    binder_status_t status = AServiceManager_addService(lights->asBinder().get(), instance.c_str());
+    CHECK(status == STATUS_OK);
 
-int main() {
-    android::sp<ILight> service = new Light();
-
-    configureRpcThreadpool(1, true);
-
-    status_t status = service->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Cannot register Light HAL service.";
-        return 1;
-    }
-
-    LOG(INFO) << "Light HAL service ready.";
-
-    joinRpcThreadpool();
-
-    LOG(ERROR) << "Light HAL service failed to join thread pool.";
-    return 1;
+    ABinderProcess_joinThreadPool();
+    return EXIT_FAILURE; // should not reached
 }
