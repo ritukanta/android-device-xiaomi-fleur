@@ -14,11 +14,9 @@
 # limitations under the License.
 #
 
-
 # Device Path
 DEVICE_PATH := device/xiaomi/fleur
 BOARD_VENDOR := xiaomi
-
 
 # Architecture
 TARGET_ARCH := arm64
@@ -88,11 +86,9 @@ PRODUCT_COPY_FILES += \
 	$(TARGET_PREBUILT_DTB):dtb.img \
 	$(TARGET_PREBUILT_KERNEL):kernel
 
-
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
 BOARD_ROOT_EXTRA_FOLDERS += metadata
-
 
 # Partitions Flags
 BOARD_USES_RECOVERY_AS_BOOT := false
@@ -143,12 +139,9 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 #TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 #TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
-
-
 # VNDK
 BOARD_VNDK_VERSION := current
 VENDOR_SECURITY_PATCH := 2022-04-01
-
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := fleur, miel, miel_p
@@ -164,3 +157,6 @@ TARGET_USES_PREBUILT_VENDOR_SEPOLICY := true
 TARGET_HAS_FUSEBLK_SEPOLICY_ON_VENDOR := true
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS := $(DEVICE_PATH)/sepolicy/private
 SELINUX_IGNORE_NEVERALLOWS := true
+
+# VINTF
+DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
