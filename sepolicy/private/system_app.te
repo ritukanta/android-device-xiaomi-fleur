@@ -1,2 +1,0 @@
-# Allow system_app to set perf_profile prop
-set_prop(system_app, perf_prop)
